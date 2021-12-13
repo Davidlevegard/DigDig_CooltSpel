@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnkScript : MonoBehaviour
+public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,9 +13,6 @@ public class AnkScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inga ankor)
-                {
-            skapa en jävla anka
-                }
+        
     }
 }
