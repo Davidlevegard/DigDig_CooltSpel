@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    
+    int maxHealth = 100;
+    int currentHealth = 100;
+    int dmg = 10;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(currentHealth);
+    }
+
+    public void takeDamage()
+    {
+        currentHealth -= dmg;
     }
 }
