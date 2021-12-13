@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class HealthBarController : MonoBehaviour
+
+public class HealthbarController : MonoBehaviour
 {
     public Image healthBar;
     public float health;
