@@ -4,16 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class HealthbarController : MonoBehaviour
+public class healthBarController : MonoBehaviour
 {
-    public Image healthBar;
-    public float health;
-    public float startHealth;
+    public Slider slider;
 
-    public void onTakeDamage(int damage)
+    public void SetMaxHealth(int health)
     {
-        health = health - damage;
-        healthBar.fillAmount = health / startHealth;
+        slider.maxValue = health;
+        slider.value = health;
+    }
+    public void SetHealth(int health)
+    {
+        slider.value = health;
     }
 
 }

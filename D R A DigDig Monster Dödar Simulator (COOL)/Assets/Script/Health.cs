@@ -5,35 +5,38 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public Image healthBar;
     public float health;
     public float startHealth;
 
-    int damage = 10;
+    public int damage = 10;
+    public int maxHealth = 100;
+    public int currentHealth;
 
-    int maxHealth = 100;
-    int currentHealth = 100;
-    int dmg = 10;
+    public healthBarController healthBar;
+    public SpriteRenderer spriteRenderer;
+    public Sprite hurtMonster;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth); //Gör så att metoden "SetMaxHealth" i scriptet healthBarController aktiveras och variablen "health" i den metoden blir lika med "maxHealth" i detta scriptet.
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(currentHealth);
+
     }
 
     public void takeDamage()
     {
-        currentHealth -= dmg;
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
     }
-    public void onTakeDamage()
+
+    public void healDamage()
     {
-        health = health - damage;
-        healthBar.fillAmount = health;
+        //Ger fienden mer health
     }
 }
