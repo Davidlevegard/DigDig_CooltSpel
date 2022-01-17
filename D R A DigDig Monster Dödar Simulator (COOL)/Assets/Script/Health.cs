@@ -32,19 +32,20 @@ public class Health : MonoBehaviour
     {
         if (currentHealth > 80)
         {
-
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = strongMonster;
         }
         else if (currentHealth > 40)
         {
-
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = normalMonster;
         }
         else if (currentHealth > 0)
         {
-
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = hurtMonster;
         }
         else
         {
-
+            Destroy(healthBar.gameObject);
+            Destroy(gameObject);
         }
     }
 
