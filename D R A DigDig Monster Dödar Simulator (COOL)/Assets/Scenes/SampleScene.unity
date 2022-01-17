@@ -1306,9 +1306,9 @@ MonoBehaviour:
   healing: 10
   healthBar: {fileID: 119063271}
   spriteRenderer: {fileID: 0}
-  strongMonster: {fileID: 0}
-  normalMonster: {fileID: 0}
-  hurtMonster: {fileID: 0}
+  strongMonster: {fileID: 7277215093650894194, guid: 2e0a96a8ee551a74f923608df298703f, type: 3}
+  normalMonster: {fileID: -2513883589942956498, guid: 2e0a96a8ee551a74f923608df298703f, type: 3}
+  hurtMonster: {fileID: 1711278749698018416, guid: 2e0a96a8ee551a74f923608df298703f, type: 3}
 --- !u!114 &1862238687
 MonoBehaviour:
   m_ObjectHideFlags: 0
