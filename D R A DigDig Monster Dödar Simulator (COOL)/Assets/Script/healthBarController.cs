@@ -17,5 +17,4 @@ public class healthBarController : MonoBehaviour
     {
         slider.value = health;
     }
-
 }
