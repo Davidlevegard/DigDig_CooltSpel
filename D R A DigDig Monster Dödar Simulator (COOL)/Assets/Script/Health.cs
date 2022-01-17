@@ -11,9 +11,13 @@ public class Health : MonoBehaviour
     public int damage = 10;
     public int maxHealth = 100;
     public int currentHealth;
+    public int healing = 10;
 
     public healthBarController healthBar;
     public SpriteRenderer spriteRenderer;
+
+    public Sprite strongMonster;
+    public Sprite normalMonster;
     public Sprite hurtMonster;
 
     // Start is called before the first frame update
@@ -26,7 +30,22 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentHealth > 80)
+        {
 
+        }
+        else if (currentHealth > 40)
+        {
+
+        }
+        else if (currentHealth > 0)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 
     public void takeDamage()
@@ -37,6 +56,8 @@ public class Health : MonoBehaviour
 
     public void healDamage()
     {
-        //Ger fienden mer health
+        if (currentHealth < maxHealth)
+        currentHealth += healing;
+        healthBar.SetHealth(currentHealth);
     }
 }
