@@ -14,5 +14,4 @@ public class HealthbarController : MonoBehaviour
         health = health - damage;
         healthBar.fillAmount = health / startHealth;
     }
-
 }
