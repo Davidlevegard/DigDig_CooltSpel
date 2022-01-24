@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    public AudioSource GunSound;
+
     public float health;
     public float startHealth;
 
@@ -23,6 +25,8 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GunSound = GetComponent<AudioSource>();
+        
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth); //Gör så att metoden "SetMaxHealth" i scriptet healthBarController aktiveras och variablen "health" i den metoden blir lika med "maxHealth" i detta scriptet.
     }
@@ -36,16 +40,19 @@ public class Health : MonoBehaviour
         }
         else if (currentHealth > 40)
         {
+
             this.gameObject.GetComponent<SpriteRenderer>().sprite = normalMonster;
         }
         else if (currentHealth > 0)
         {
+
             this.gameObject.GetComponent<SpriteRenderer>().sprite = hurtMonster;
         }
         else
         {
             Destroy(healthBar.gameObject);
             Destroy(gameObject);
+
         }
     }
 
